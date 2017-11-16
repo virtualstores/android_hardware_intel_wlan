@@ -105,6 +105,28 @@ int wpa_driver_nl80211_driver_cmd(void *priv, char *cmd, char *buf,
 		if (!ret)
 			ret = os_snprintf(buf, buf_len,
 					  "Macaddr = " MACSTR "\n", MAC2STR(macaddr));
+	} else if (os_strncasecmp(cmd, "BTCOEXMODE", 10) == 0) {
+		wpa_printf(MSG_DEBUG, "BTCOEXMODE not yet implemented");
+		ret = 0;
+	} else if (os_strcasecmp(cmd, "BTCOEXSCAN-STOP") == 0) {
+		wpa_printf(MSG_DEBUG, "BTCOEXSCAN-STOP not yet implemented");
+		ret = 0;
+	} else if (os_strcasecmp(cmd, "RXFILTER-STOP") == 0) { 
+		wpa_printf(MSG_DEBUG, "RXFILTER-STOP net yet implemented");
+		ret = 0;
+	} else if (os_strcasecmp(cmd, "RXFILTER-START") == 0) {
+		wpa_printf(MSG_DEBUG, "RXFILTER-STOP not yet implemented");
+		ret = 0;
+	} else if (os_strncasecmp(cmd, "SETSUSPENDMODE", 14) == 0) { 
+		wpa_printf(MSG_DEBUG, "SETSUSPENDMODE not yet implemented");
+		ret = 0;
+	} else if (os_strncasecmp(cmd, "RXFILTER-ADD", 12) == 0) { 
+		wpa_printf(MSG_DEBUG, "RXFILTER-ADD not yet implemented");
+		ret = 0;
+	} else if (os_strncasecmp(cmd, "RXFILTER-REMOVE", 15) == 0) {
+ 
+		wpa_printf(MSG_DEBUG, "RXFILTER-REMOVE ofc isnt supported then..");
+		ret = 0;
 	} else { /* Use private command */
 		os_memcpy(buf, cmd, strlen(cmd) + 1);
 		memset(&ifr, 0, sizeof(ifr));
