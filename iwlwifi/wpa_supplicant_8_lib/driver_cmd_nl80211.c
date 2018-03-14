@@ -6,7 +6,7 @@
  * published by the Free Software Foundation.
  *
  * Alternatively, this software may be distributed under the terms of BSD
- * license.
+ * license..
  *
  */
 
